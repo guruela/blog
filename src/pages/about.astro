@@ -1,29 +1,107 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About | Gurucharan Shivakumar">
-    <div class="max-w-3xl mx-auto py-8">
-        <h1 class="text-3xl font-extrabold text-slate-900 dark:text-slate-100 sm:text-4xl mb-6 transition-colors duration-300">About Me</h1>
-        
-        <div class="bg-white dark:bg-slate-800/50 shadow rounded-lg border border-purple-100 dark:border-purple-900/30 p-8 space-y-6 text-slate-700 dark:text-slate-300 leading-relaxed transition-colors duration-300">
+    <div class="max-w-4xl mx-auto py-8 text-slate-900 dark:text-white">
+        <!-- Header -->
+        <h1 class="text-4xl font-extrabold sm:text-5xl mb-6">
+            Hello! I’m Gurucharan Shivakumar.
+        </h1>
+
+        <div
+            class="space-y-6 text-lg text-slate-700 dark:text-slate-300 leading-relaxed text-justify"
+        >
             <p>
-                Hello! I'm Gurucharan Shivakumar. I'm a passionate developer building for the web.
+                I’m an electronics engineering student with a strong interest in
+                VLSI design and system-level software. I enjoy building things
+                that work close to the hardware, as well as clean, efficient web
+                applications.
             </p>
             <p>
-                This portfolio is built with <strong class="text-purple-600 dark:text-purple-400">Astro</strong> and <strong class="text-purple-600 dark:text-purple-400">Tailwind CSS</strong> to ensure high performance and a clean design.
+                This portfolio is built with <strong class="text-purple-400"
+                    >Astro</strong
+                > and <strong class="text-purple-400">Tailwind CSS</strong>,
+                focusing on performance, simplicity, and clarity.
             </p>
-            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 mt-4 transition-colors">My Background</h2>
+
+            <!-- Background Section -->
+            <h2
+                class="text-2xl font-bold text-slate-900 dark:text-white mt-8 border-b border-slate-200 dark:border-slate-700 pb-2"
+            >
+                My Background
+            </h2>
             <p>
-                [Your background information goes here. You can talk about your education, work experience, and what drives you.]
+                I’m currently studying Electronics and Communication
+                Engineering, specializing in VLSI design. My interests span
+                digital design, computer architecture, embedded systems, and
+                software development.
             </p>
-            <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 mt-4 transition-colors">Skills</h2>
-            <ul class="list-disc pl-5 space-y-2">
-                <li>JavaScript / TypeScript</li>
-                <li>React / Next.js / Astro</li>
-                <li>Tailwind CSS</li>
-                <li>Node.js</li>
-            </ul>
+            <p>
+                I enjoy exploring how software interacts with hardware — from
+                HDL-based designs and verification to writing efficient system
+                and web-level code.
+            </p>
+
+            <!-- Skills Section -->
+            <h2
+                class="text-2xl font-bold text-slate-900 dark:text-white mt-8 border-b border-slate-200 dark:border-slate-700 pb-2"
+            >
+                Skills
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- HDL & Hardware -->
+                <div
+                    class="bg-white dark:bg-slate-800/50 p-6 rounded-lg border border-slate-200 dark:border-slate-700"
+                >
+                    <h3
+                        class="text-xl font-semibold text-purple-600 dark:text-purple-400 mb-4"
+                    >
+                        HDL & Hardware
+                    </h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                        <li>Verilog / SystemVerilog</li>
+                        <li>Digital design & verification</li>
+                        <li>Embedded Software Development</li>
+                    </ul>
+                </div>
+
+                <!-- Software & Systems -->
+                <div
+                    class="bg-white dark:bg-slate-800/50 p-6 rounded-lg border border-slate-200 dark:border-slate-700"
+                >
+                    <h3
+                        class="text-xl font-semibold text-purple-600 dark:text-purple-400 mb-4"
+                    >
+                        Software & Systems
+                    </h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                        <li>Python</li>
+                        <li>C / C++</li>
+                        <li>Java</li>
+                        <li>Rust</li>
+                        <li>JavaScript / TypeScript</li>
+                    </ul>
+                </div>
+
+                <!-- Frontend & Web -->
+                <div
+                    class="bg-white dark:bg-slate-800/50 p-6 rounded-lg border border-slate-200 dark:border-slate-700"
+                >
+                    <h3
+                        class="text-xl font-semibold text-purple-600 dark:text-purple-400 mb-4"
+                    >
+                        Frontend & Web
+                    </h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-300">
+                        <li>Astro</li>
+                        <li>Tailwind CSS</li>
+                        <li>Next.js</li>
+                        <li>React</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </Layout>

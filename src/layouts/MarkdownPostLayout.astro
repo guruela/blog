@@ -1,21 +1,48 @@
 ---
-import Layout from './Layout.astro';
+import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title}>
-    <div class="max-w-3xl mx-auto py-8">
-        <div class="mb-6">
-            <h1 class="text-3xl font-extrabold text-slate-900 dark:text-slate-100 sm:text-4xl transition-colors duration-300">{frontmatter.title}</h1>
-            <div class="flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400 mt-2">
-                 <time datetime={frontmatter.date}>{new Date(frontmatter.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
-                 <span>•</span>
-                 <span>{frontmatter.author || "Gurucharan Shivakumar"}</span>
+    <div class="max-w-4xl mx-auto py-12 px-4 sm:px-6">
+        <div
+            class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 md:p-12 shadow-xl"
+        >
+            <div
+                class="mb-10 text-center border-b border-slate-200 dark:border-slate-700 pb-8"
+            >
+                <h1
+                    class="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-slate-100 mb-6 leading-tight"
+                >
+                    {frontmatter.title}
+                </h1>
+                <div
+                    class="flex items-center justify-center space-x-4 text-slate-400"
+                >
+                    <time datetime={frontmatter.date} class="font-medium">
+                        {
+                            new Date(frontmatter.date).toLocaleDateString(
+                                "en-US",
+                                {
+                                    year: "numeric",
+                                    month: "long",
+                                    day: "numeric",
+                                },
+                            )
+                        }
+                    </time>
+                    <span>•</span>
+                    <span class="font-medium text-purple-400"
+                        >{frontmatter.author || "Gurucharan Shivakumar"}</span
+                    >
+                </div>
             </div>
-        </div>
-        
-        <div class="bg-white dark:bg-slate-800/50 shadow rounded-lg border border-purple-100 dark:border-purple-900/30 p-8 text-slate-700 dark:text-slate-300 leading-relaxed transition-colors duration-300 prose prose-slate dark:prose-invert max-w-none">
-            <slot />
+
+            <div
+                class="markdown-content mx-auto max-w-none text-slate-700 dark:text-slate-300 leading-relaxed"
+            >
+                <slot />
+            </div>
         </div>
     </div>
 </Layout>
